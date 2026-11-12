@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Éire Roads – Rundreisen durch Irland</title>
+<link rel="stylesheet" href="style-b.css">
+</head>
+<body data-zeit="tag" data-wetter="unbekannt">
+  <header class="site-header">
+	  <a class="logo" href="#start">
+		  Éire Roads
+	  </a>
+
+	  <nav aria-label="Hauptnavigation">
+	  <a href="#ueberuns">About Us</a>
+		  <a href="#reisen">Journeys</a>
+		  <a href="#orte">Destinations</a>
+		  <a href="#culture">Culture</a>
+		  <a href="#musik">Music</a>
+		  <a class="nav-cta" href="mailto:hallo@eire-roads.example">
+			  Reise anfragen
+		  </a>
+	  </nav>
+	</header> 
+  <main>
+    <section class="hero" id="start">
+  <div class="hero-text">
+    <p class="hero-stempel">ISSUE NO. 001 — IRELAND</p>
+    <h1>DUBLIN<br>AFTER DARK</h1>
+    <p class="hero-claim">NO TOURIST POSTCARD.</p>
+    <p class="kleingedruckt">
+      Four cities. One restless island. <br> Stories after dark.
+    </p>
+  </div>
+
+  <div class="landschaft" role="img"
+       aria-label="Abstrakte irische Landschaft bei Nacht">
+    <svg viewBox="0 0 400 360"
+         preserveAspectRatio="xMidYMid slice"
+         aria-hidden="true">
+      <circle id="gestirn" cx="290" cy="95" r="34"/>
+      <path id="huegel-1" d="M0 220 C60 170 120 160 190 200 C250 232 320 170 400 190 L400 360 L0 360Z"/>
+      <path id="huegel-2" d="M0 262 C80 222 150 252 220 236 C300 218 350 242 400 230 L400 360 L0 360Z"/>
+      <path id="huegel-3" d="M0 312 C90 282 170 306 250 293 C320 281 370 297 400 291 L400 360 L0 360Z"/>
+    </svg>
+  </div>
+</section>
+
+    <section class="wetter" id="wetter" aria-live="polite">
+      <h2 id="wetter-titel">Das Wetter in Dublin, gerade jetzt</h2>
+      <p id="wetter-satz">Wetterdaten werden geladen …</p>
+      <p id="wetter-stand" class="kleingedruckt"></p>
+      <p id="test-hinweis" hidden>Testmodus: Tageszeit oder Wetter sind künstlich gesetzt.</p>
+    </section>
+
+	  <section class="destinations" id="orte">
+  <div class="section-heading">
+    <p class="eyebrow">A JOURNEY THROUGH IRELAND</p>
+    <h2>Explore Ireland</h2>
+  </div>
+
+  <div class="city-grid">
+
+    <button class="city-card" type="button"
+      data-city="dublin" aria-pressed="true">
+      <span class="city-number">01</span>
+      <span class="city-name">Dublin</span>
+      <span class="city-description">History & City Life</span>
+      <span class="city-region">Republic of Ireland</span>
+    </button>
+
+    <button class="city-card" type="button"
+      data-city="galway" aria-pressed="false">
+      <span class="city-number">02</span>
+      <span class="city-name">Galway</span>
+      <span class="city-description">Music & Culture</span>
+      <span class="city-region">Republic of Ireland</span>
+    </button>
+
+    <button class="city-card" type="button"
+      data-city="cork" aria-pressed="false">
+      <span class="city-number">03</span>
+      <span class="city-name">Cork</span>
+      <span class="city-description">Food & Lifestyle</span>
+      <span class="city-region">Republic of Ireland</span>
+    </button>
+
+    <button class="city-card" type="button"
+      data-city="belfast" aria-pressed="false">
+      <span class="city-number">04</span>
+      <span class="city-name">Belfast</span>
+      <span class="city-description">History &amp; Modern Culture</span>
+      <span class="city-region">North of Ireland, UK</span>
+    </button>
+
+  </div>
+
+  <div class="city-detail" id="city-detail">
+    <p class="eyebrow">YOUR FIRST STOP</p>
+    <h3>Dublin</h3>
+    <p>
+      Discover the lively streets, rich history and
+      welcoming atmosphere of Ireland's capital.
+    </p>
+  </div>
+</section>
+	  
+	  <section class="music" id="musik">
+  <div class="music-heading">
+    <p class="music-stempel">SOUND FROM THE ISLAND — ISSUE 001</p>
+    <h2>NO FOLK.<br>NO FILTER.</h2>
+    <p class="music-intro">
+      Ireland's new sound. Three names you should know.
+    </p>
+  </div>
+
+  <div class="music-grid">
+
+    <article class="music-card">
+      <span class="music-number">01 / DUBLIN</span>
+      <h3>FONTAINES D.C.</h3>
+      <p>
+        Raw post-punk. Poetic storytelling.
+        The restless energy of Dublin.
+      </p>
+      <a href="https://fontainesdc.com/"
+         target="_blank" rel="noopener noreferrer">
+        OFFICIAL WEBSITE ↗
+      </a>
+    </article>
+
+    <article class="music-card">
+      <span class="music-number">02 / CORK</span>
+      <h3>CMAT</h3>
+      <p>
+        Sharp lyrics, bold pop melodies
+        and a distinctive sense of humour.
+      </p>
+      <a href="https://cmatbaby.com/"
+         target="_blank" rel="noopener noreferrer">
+        OFFICIAL WEBSITE ↗
+      </a>
+    </article>
+
+    <article class="music-card">
+      <span class="music-number">03 / BELFAST</span>
+      <h3>KNEECAP</h3>
+      <p>
+        Hip-hop, Belfast attitude
+        and Irish-language expression.
+      </p>
+      <a href="https://www.kneecap.ie/"
+         target="_blank" rel="noopener noreferrer">
+        OFFICIAL WEBSITE ↗
+      </a>
+    </article>
+
+  </div>
+</section>
+	  
+    <section class="angebote" id="reisen">
+      <h2>Unsere Rundreisen</h2>
+      <p id="fokus-text">Drei Reisen, drei Seiten von Irland.</p>
+      <ul id="angebote">
+        <li data-id="kueste"><strong>Atlantikküste</strong>Cliffs of Moher, Dingle und Connemara. <span>8 Tage, ab 1.290 €</span></li>
+        <li data-id="pubs"><strong>Pubs und Museen in Dublin</strong>Trinity College, Guinness Storehouse und Livemusik am Abend. <span>4 Tage, ab 690 €</span></li>
+        <li data-id="huegel"><strong>Hügel und Seen in Wicklow</strong>Wanderwege rund um Glendalough. <span>5 Tage, ab 890 €</span></li>
+      </ul>
+      <a class="button" href="mailto:hallo@eire-roads.example">Reise anfragen</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+  Wetterdaten von
+  <a href="https://open-meteo.com/">Open-Meteo</a>.
+  Lizenz:
+  <a href="https://creativecommons.org/licenses/by/4.0/">
+    Creative Commons Attribution 4.0 International (CC BY 4.0)
+  </a>.
+</p>
+    <p>Studienprojekt der Kunstschule Wandsbek, keine offizielle Seite. Éire Roads und alle Angebote sind erfunden.</p>
+    <p>Schriften: Cormorant Garamond, Anton und Space Mono (SIL Open Font License).</p>
+  </footer>
+
+  <script>
+  // Unsere vier Wetterstandorte
+  const wetterOrte = {
+    dublin: {
+      name: "Dublin",
+      latitude: 53.35,
+      longitude: -6.26
+    },
+    galway: {
+      name: "Galway",
+      latitude: 53.27,
+      longitude: -9.05
+    },
+    cork: {
+      name: "Cork",
+      latitude: 51.90,
+      longitude: -8.47
+    },
+    belfast: {
+      name: "Belfast",
+      latitude: 54.60,
+      longitude: -5.93
+    }
+  };
+
+  // Startstadt
+  let aktuelleStadt = "dublin";
+
+  // Wetterbeschreibung anhand des Wettercodes
+  function wetterText(code) {
+    if (code === 0) return "klar";
+    if (code === 1) return "überwiegend klar";
+    if (code === 2) return "teils bewölkt";
+    if (code === 3) return "bedeckt";
+    if (code === 45 || code === 48) return "neblig";
+    if (code >= 51 && code <= 57) return "Nieselregen";
+    if (code >= 61 && code <= 67) return "Regen";
+    if (code >= 71 && code <= 77) return "Schnee";
+    if (code >= 80 && code <= 82) return "Regenschauer";
+    if (code >= 95) return "Gewitter";
+    return "wechselhaft";
+  }
+
+  // Prüfen, ob es regnet
+  function istRegen(code) {
+    return (code >= 51 && code <= 67) ||
+      (code >= 71 && code <= 77) ||
+      (code >= 80 && code <= 82) ||
+      code >= 95;
+  }
+
+  // HTML-Elemente finden
+  const satz = document.getElementById("wetter-satz");
+  const stand = document.getElementById("wetter-stand");
+  const liste = document.getElementById("angebote");
+  const fokusText = document.getElementById("fokus-text");
+
+  // Testmodi: ?test=nacht, ?test=regen oder ?test=sonne
+  const test = new URLSearchParams(location.search).get("test");
+
+  // Wetterdaten auf der Seite anzeigen
+  function anwenden(c) {
+    let tag = c.is_day === 1;
+    let code = c.weather_code;
+    const name = wetterOrte[aktuelleStadt].name;
+
+    if (test === "nacht") tag = false;
+    if (test === "regen") {
+      tag = true;
+      code = 61;
+    }
+    if (test === "sonne") {
+      tag = true;
+      code = 0;
+    }
+
+    const testHinweis = document.getElementById("test-hinweis");
+    if (test && testHinweis) {
+      testHinweis.hidden = false;
+    }
+
+    const regen = istRegen(code);
+
+    document.body.dataset.zeit = tag ? "tag" : "nacht";
+    document.body.dataset.wetter =
+      regen ? "regen" : (code <= 1 ? "sonne" : "wolken");
+
+    satz.textContent =
+      "In " + name + " sind es gerade " +
+      Math.round(c.temperature_2m) + " °C, " +
+      wetterText(code) + ".";
+
+    stand.textContent =
+      "Stand " + c.time.split("T")[1] + " Uhr Ortszeit";
+
+    // Passendes Angebot hervorheben
+    const id = (regen || !tag) ? "pubs" : "kueste";
+
+    fokusText.textContent = regen
+      ? "Es regnet in " + name + ". Heute passt: Pubs und Museen."
+      : !tag
+        ? "In " + name + " ist es dunkel. Heute passt: Livemusik im Pub."
+        : "Gutes Wetter in " + name + ". Heute passt: die Atlantikküste.";
+
+    const eintrag = liste.querySelector('[data-id="' + id + '"]');
+
+    if (eintrag) {
+      liste.querySelectorAll(".im-fokus").forEach(item => {
+        item.classList.remove("im-fokus");
+      });
+
+      eintrag.classList.add("im-fokus");
+      liste.prepend(eintrag);
+    }
+  }
+
+  // Wetter für die ausgewählte Stadt laden
+  function wetterLaden(stadtKey) {
+    aktuelleStadt = stadtKey;
+    const ort = wetterOrte[stadtKey];
+
+    const URL_API =
+      "https://api.open-meteo.com/v1/forecast?latitude=" +
+      ort.latitude +
+      "&longitude=" + ort.longitude +
+      "&current=temperature_2m,is_day,weather_code&timezone=auto";
+
+    satz.textContent = "Wetter für " + ort.name + " wird geladen...";
+    stand.textContent = "Bitte einen Moment warten ...";
+
+    fetch(URL_API)
+      .then(function (antwort) {
+        if (!antwort.ok) {
+          throw new Error("Status " + antwort.status);
+        }
+        return antwort.json();
+      })
+      .then(function (daten) {
+        const c = daten.current;
+
+        if (!c || c.temperature_2m === undefined) {
+          throw new Error("Unerwartete Antwort");
+        }
+
+        anwenden(c);
+      })
+      .catch(function (fehler) {
+        console.error(fehler);
+        satz.textContent = "Wetterdaten gerade nicht erreichbar.";
+        stand.textContent =
+          "Die Seite zeigt sich in ihrer Standardansicht. Bitte lade sie später neu.";
+      });
+  }
+
+  // Beschreibungen der vier Städte
+  const cityData = {
+    dublin: {
+      name: "Dublin",
+      text: "Discover the lively streets, rich history and welcoming atmosphere of Ireland's capital."
+    },
+    galway: {
+      name: "Galway",
+      text: "Experience colourful streets, traditional music and the creative spirit of Ireland's west coast."
+    },
+    cork: {
+      name: "Cork",
+      text: "Explore charming streets, local food and the warm atmosphere of Ireland's southern city."
+    },
+    belfast: {
+      name: "Belfast",
+      text: "Discover a city full of history, contemporary culture and a vibrant music scene in the North of Ireland."
+    }
+  };
+
+  // Stadtkarten auswählen
+  const cityCards = document.querySelectorAll(".city-card");
+  const cityDetail = document.querySelector("#city-detail");
+	  const wetterTitel = document.querySelector("#wetter-titel");
+
+  cityCards.forEach(card => {
+    card.addEventListener("click", () => {
+      const selectedCity = card.dataset.city;
+      const city = cityData[selectedCity];
+
+      // Wetter der ausgewählten Stadt laden
+wetterLaden(selectedCity);
+
+// Wetterüberschrift aktualisieren
+wetterTitel.textContent = `Das Wetter in ${city.name}, gerade jetzt`;
+
+      // Aktive Stadt markieren
+      cityCards.forEach(item => {
+        item.setAttribute("aria-pressed", "false");
+      });
+
+      card.setAttribute("aria-pressed", "true");
+
+      // Beschreibung aktualisieren
+      cityDetail.innerHTML = `
+        <p class="eyebrow">YOUR NEXT STOP</p>
+        <h3>${city.name}</h3>
+        <p>${city.text}</p>
+      `;
+    });
+  });
+
+ // Beim ersten Laden Dublin anzeigen
+wetterTitel.textContent = "Das Wetter in Dublin, gerade jetzt";
+wetterLaden("dublin");
+	  // Wetterdaten jede Stunde automatisch aktualisieren
+setInterval(() => {
+  wetterLaden(aktuelleStadt);
+}, 60 * 60 * 1000);
+</script>
+</body>
+</html>
+

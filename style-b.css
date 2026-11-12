@@ -1,0 +1,1045 @@
+@charset "UTF-8";
+/* CSS Document */
+/* =================================
+   VARIANTE B – DUBLIN AFTER DARK
+================================= */
+/* =================================
+   LOKALE SCHRIFTEN – VARIANTE B
+================================= */
+
+@font-face {
+  font-family: 'Anton';
+  src: url('../Version A/fonts/Anton-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url('../Version A/fonts/SpaceMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url('../Version A/fonts/SpaceMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --bg: #D0D0CC;
+  --ink: #171717;
+  --muted: #777773;
+  --accent: #F02B32;
+  --gruen: #171717;
+
+  --himmel1: #A5A5A1;
+  --himmel2: #D0D0CC;
+
+  --huegel1: #777773;
+  --huegel2: #41413F;
+  --huegel3: #171717;
+
+  --gestirn: #F02B32;
+  --gestirn-opa: 1;
+  --regen-opa: 0;
+}
+
+/* Grundschrift */
+body {
+  font-family: 'Space Mono', monospace;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+/* Große plakative Überschriften */
+/* Große plakative Überschriften */
+h1,
+.hero h2,
+.logo,
+.city-name {
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+/* Kleine und mittlere Überschriften */
+h2,
+h3 {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+/* Nacht: fast schwarz */
+body[data-zeit="nacht"] {
+  --bg: #101010;
+  --ink: #F2F0EB;
+  --muted: #A5A5A1;
+  --accent: #FF3038;
+  --gruen: #242424;
+
+  --himmel1: #080808;
+  --himmel2: #171717;
+  --huegel1: #343434;
+  --huegel2: #202020;
+  --huegel3: #101010;
+
+  --gestirn: #FF3038;
+  --gestirn-opa: .9;
+}
+
+/* Regen: Beton und Nebel */
+body[data-wetter="regen"] {
+  --bg: #A8A8A4;
+  --himmel1: #777773;
+  --himmel2: #A8A8A4;
+  --huegel1: #656562;
+  --huegel2: #41413F;
+  --gestirn-opa: .15;
+  --regen-opa: .45;
+}
+ /* Schrift: Cormorant Garamond (SIL OFL). Download bei fonts.google.com, Datei in den Ordner "fonts" legen. */
+    @font-face {
+      font-family: "Cormorant Garamond";
+      src: url("../Version A/fonts/CormorantGaramond-VariableFont_wght.ttf") format("truetype");
+      font-weight: 300 700;
+      font-display: swap;
+    }
+
+   /* Standard: Tag, freundlich */
+:root {
+  --bg: #E8E4D8;
+  --ink: #1D2B22;
+  --muted: #4F5B50;
+  --accent: #8F4C36;
+  --gruen: #183B2B;
+
+  --himmel1: #CBD8C6;
+  --himmel2: #E8E4D8;
+
+  --huegel1: #87998A;
+  --huegel2: #4E7059;
+  --huegel3: #183B2B;
+
+  --gestirn: #A65E43;
+  --gestirn-opa: 1;
+  --regen-opa: 0;
+}
+
+/* Regen am Tag: grau-grün, Sonne fast weg */
+body[data-wetter="regen"] {
+  --bg: #D3D7CD;
+  --himmel1: #A9B4AD;
+  --himmel2: #D3D7CD;
+
+  --huegel1: #7B8F82;
+  --huegel2: #4D6757;
+
+  --gestirn-opa: .2;
+  --regen-opa: .35;
+}
+
+/* Nacht: Kaminabend, dunkles Grün und Kupfer */
+body[data-zeit="nacht"] {
+  --bg: #121C16;
+  --ink: #ECE5CF;
+  --muted: #B3B8A8;
+  --accent: #C78C70;
+  --gruen: #86B79A;
+
+  --himmel1: #0B120E;
+  --himmel2: #1C3024;
+
+  --huegel1: #26402F;
+  --huegel2: #1B3024;
+  --huegel3: #0F1A13;
+
+  --gestirn: #ECE5CF;
+  --gestirn-opa: .9;
+}
+
+    body[data-zeit="nacht"][data-wetter="regen"] { --gestirn-opa: .15; --regen-opa: .3; }
+
+    * { box-sizing: border-box; }
+    body {
+    margin: 0; 
+	background: var(--bg); 
+    color: var(--ink);
+      font-family: "Cormorant Garamond", Georgia, serif; 
+		font-size: 1.3rem; 
+		line-height: 1.5; 
+		font-weight: 500;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      body { transition: background-color .8s, color .8s; }
+    }
+    
+a { 
+	color: var(--accent); 
+}
+    
+a:focus-visible, button:focus-visible { 
+	outline: 3px solid var(--accent); 
+	outline-offset: 3px; 
+}
+
+    header, main, footer { max-width: 72rem; margin: 0 auto; padding-left: 1.25rem; padding-right: 1.25rem; }
+    header { padding-top: 1.5rem; font-size: 1.5rem; font-weight: 700; letter-spacing: .02em; }
+
+    .hero { display: grid; gap: 2rem; padding: 2rem 0 3rem; align-items: center; }
+    @media (min-width: 52rem) { .hero { grid-template-columns: 1.1fr 1fr; gap: 4rem; padding: 4rem 0 5rem; } }
+    h1 { margin: 0; font-size: clamp(3.4rem, 10vw, 7rem); line-height: .95; font-weight: 500; letter-spacing: -.01em; }
+    .hero p { max-width: 32rem; margin: 1.25rem 0 0; }
+    .kleingedruckt { color: var(--muted); font-size: 1.1rem; }
+
+    .landschaft {
+      position: relative; overflow: hidden; border-radius: 6px; aspect-ratio: 10 / 9;
+      background: linear-gradient(var(--himmel1), var(--himmel2));
+    }
+    .landschaft svg { display: block; width: 100%; height: 100%; }
+    .landschaft::after { /* Regenstreifen */
+      content: ""; position: absolute; inset: 0; opacity: var(--regen-opa); pointer-events: none;
+      background: repeating-linear-gradient(105deg, transparent 0 14px, rgba(255,255,255,.55) 14px 15px);
+    }
+    #gestirn { fill: var(--gestirn); opacity: var(--gestirn-opa); }
+    #huegel-1 { fill: var(--huegel1); } #huegel-2 { fill: var(--huegel2); } #huegel-3 { fill: var(--huegel3); }
+
+    .wetter { padding: 2rem 0; border-top: 2px solid var(--gruen); }
+    .wetter h2, .angebote h2 { margin: 0 0 .75rem; font-size: 1.1rem; font-weight: 700; color: var(--muted); }
+    #wetter-satz { margin: 0; font-size: clamp(1.8rem, 5vw, 3rem); line-height: 1.15; max-width: 40rem; }
+    #wetter-stand { margin: .75rem 0 0; }
+    #test-hinweis { margin-top: 1rem; padding: .5rem .75rem; border: 2px dashed var(--accent); }
+
+    .angebote { padding: 2rem 0 3rem; }
+    #fokus-text { margin: 0 0 1.5rem; font-size: 1.6rem; }
+    ul { list-style: none; margin: 0; padding: 0; }
+    li { padding: 1.25rem 0 1.25rem 1.25rem; border-left: 4px solid transparent; border-bottom: 1px solid var(--muted); }
+    li.im-fokus { border-left-color: var(--accent); }
+    li strong { display: block; font-size: 1.8rem; line-height: 1.15; }
+    li span { color: var(--muted); }
+    .button {
+      display: inline-block; margin-top: 2rem; padding: .8rem 1.6rem; background: var(--gruen); color: var(--bg);
+      font: inherit; font-weight: 700; text-decoration: none; border-radius: 4px;
+    }
+    body[data-zeit="nacht"] .button { background: var(--accent); color: #121C16; }
+
+    footer { padding-top: 2rem; padding-bottom: 3rem; font-size: 1rem; color: var(--muted); border-top: 1px solid var(--muted); }
+    footer p { margin: .3rem 0; }
+
+
+header.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--muted);
+}
+
+.site-header .logo {
+  color: var(--ink);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-header nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.site-header nav a {
+  color: var(--ink);
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.site-header nav a:hover {
+  color: var(--accent);
+}
+
+.site-header nav .nav-cta {
+  background: var(--gruen);
+  color: #FFFFFF;
+  padding: 0.7rem 1.1rem;
+  border-radius: 3px;
+  font-weight: 700;
+}
+
+.site-header nav .nav-cta:hover {
+  opacity: 0.85;
+}
+
+/* MOBILE NAVIGATION */
+
+@media (max-width: 700px) {
+  header.site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .site-header nav {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+}
+
+
+
+/* ==========================
+   EXPLORE IRELAND
+========================== */
+
+.destinations {
+  padding: 5rem 2rem;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  font-size: 3rem;
+  color: var(--ink);
+  margin: 0.5rem 0;
+}
+
+.section-heading p {
+  color: var(--muted);
+}
+
+.city-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.city-card {
+  min-height: 220px;
+  padding: 1.5rem;
+  border: 1px solid rgba(29, 43, 34, 0.2);
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--ink);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+}
+
+.city-number {
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  color: var(--accent);
+  margin-bottom: auto;
+}
+
+.city-name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.city-description,
+.city-region {
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  margin-top: 0.4rem;
+}
+
+.city-region {
+  color: var(--muted);
+}
+
+.city-card:hover,
+.city-card[aria-pressed="true"] {
+  background: var(--gruen);
+  color: #E8E4D8;
+}
+
+.city-card:hover .city-number,
+.city-card[aria-pressed="true"] .city-number {
+  color: #D9B49A;
+}
+
+.city-card:hover .city-region,
+.city-card[aria-pressed="true"] .city-region {
+  color: #D7DED4;
+}
+
+.city-card:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.city-detail {
+  max-width: 72rem;
+  margin: 2rem auto 0;
+  padding: 2rem;
+  border-left: 4px solid var(--accent);
+  background: rgba(135, 153, 138, 0.15);
+}
+
+.city-detail h3 {
+  color: var(--ink);
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.city-detail p:last-child {
+  color: var(--muted);
+}
+
+/* Mobile Ansicht */
+@media (max-width: 800px) {
+  .city-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .city-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading h2 {
+    font-size: 2.3rem;
+  }
+}
+
+/* HERO – Fanzine-Cover */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  min-height: 75vh;
+  padding: 4rem 6%;
+  background: var(--bg);
+}
+
+.hero-stempel {
+  color: var(--accent);
+  font-size: .8rem;
+  font-weight: bold;
+  letter-spacing: .12em;
+}
+
+.hero h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(4rem, 9vw, 8rem);
+  line-height: .9;
+  text-transform: uppercase;
+  margin: 1.5rem 0;
+}
+
+.hero-claim {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: .5rem .8rem;
+  font-weight: bold;
+  transform: rotate(-2deg);
+}
+
+.hero .kleingedruckt {
+  color: var(--muted);
+  font-size: .8rem;
+  max-width: 30rem;
+  margin-top: 2rem;
+}
+
+.landschaft {
+  border: 2px solid var(--ink);
+  transform: rotate(1deg);
+  overflow: hidden;
+}
+
+.landschaft svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(4rem, 16vw, 6rem);
+  }
+}
+
+/* HERO – grafische Nachtlandschaft */
+
+.landschaft {
+  background: #171717;
+  border: 2px solid #F2F0EB;
+  box-shadow: 8px 8px 0 var(--accent);
+}
+
+.landschaft svg {
+  background: #171717;
+}
+
+#gestirn {
+  fill: var(--accent);
+}
+
+#huegel-1 {
+  fill: #777773;
+}
+
+#huegel-2 {
+  fill: #41413F;
+}
+
+#huegel-3 {
+  fill: #171717;
+}
+
+/* HEADER – Post-Punk-Fanzine */
+
+.site-header {
+  background: #171717;
+  color: #F2F0EB;
+  border-bottom: 3px solid var(--accent);
+  padding: 1.2rem 5%;
+}
+
+.site-header .logo {
+  color: #F2F0EB;
+  font-family: 'Anton', sans-serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.site-header nav a {
+  color: #F2F0EB;
+  font-family: 'Space Mono', monospace;
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.site-header nav a:hover {
+  color: var(--accent);
+}
+
+.site-header nav a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+
+
+/* WETTER – Urban Data Panel */
+
+.wetter {
+  background: #242424;
+  color: #F2F0EB;
+  border-top: 1px solid #777773;
+  border-bottom: 3px solid var(--accent);
+  padding: 2rem 5%;
+  margin: 1rem 0;
+}
+
+.wetter h2 {
+  color: #F2F0EB;
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+
+.wetter p {
+  color: #BDBDB8;
+}
+
+#wetter-satz {
+  color: #F2F0EB;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+#wetter-stand {
+  font-size: .75rem;
+  color: #92928F;
+}
+
+#test-hinweis {
+  color: var(--accent);
+  font-size: .8rem;
+}
+
+/* STÄDTE – Indie Poster Grid */
+
+.destinations {
+  background: #171717;
+  color: #F2F0EB;
+  padding: 2.5rem 5% 5rem;
+}
+
+.destinations .section-heading h2 {
+  color: #F2F0EB;
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(3rem, 7vw, 5rem);
+  text-transform: uppercase;
+}
+
+.destinations .section-heading p {
+  color: #92928F;
+}
+
+.destinations .eyebrow {
+  color: var(--accent);
+  font-family: 'Space Mono', monospace;
+  letter-spacing: .12em;
+}
+
+.city-grid {
+  gap: 1rem;
+}
+
+.city-card {
+  background: #242424;
+  color: #F2F0EB;
+  border: 1px solid #555;
+  border-radius: 0;
+  min-height: 250px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.city-number {
+  color: var(--accent);
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+}
+
+.city-name {
+  font-family: 'Anton', sans-serif;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.city-description,
+.city-region {
+  font-family: 'Space Mono', monospace;
+  font-size: .7rem;
+  color: #BDBDB8;
+}
+
+.city-card:hover,
+.city-card[aria-pressed="true"] {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.city-card:hover .city-number,
+.city-card[aria-pressed="true"] .city-number,
+.city-card:hover .city-region,
+.city-card[aria-pressed="true"] .city-region {
+  color: #fff;
+}
+
+.city-detail {
+  background: #242424;
+  color: #F2F0EB;
+  border-left: 5px solid var(--accent);
+  border-radius: 0;
+  padding: 2rem;
+}
+
+/* CITY DETAIL – FLIESSTEXT BESSER LESBAR */
+
+.city-detail p {
+  color: #F1F0EB;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.city-detail .eyebrow {
+  color: #8F4C36;
+}
+
+.city-detail h3 {
+  color: #F2F0EB;
+  font-family: 'Anton', sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+/* REISEANGEBOTE – TOUR LIST */
+
+.angebote {
+  background: #242424;
+  color: #F2F0EB;
+  padding: 5rem 6%;
+  border-top: 3px solid var(--accent);
+}
+
+.angebote h2 {
+  color: #F2F0EB;
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(3rem, 7vw, 5rem);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.angebote > p {
+  color: #92928F;
+  font-family: 'Space Mono', monospace;
+  font-size: .85rem;
+}
+
+.angebote ul {
+  list-style: none;
+  padding: 0;
+  margin: 3rem 0;
+  border-top: 1px solid #555;
+}
+
+.angebote li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: .5rem 2rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #555;
+  color: #BDBDB8;
+  font-family: 'Space Mono', monospace;
+  font-size: .8rem;
+}
+
+.angebote li strong {
+  grid-column: 1 / -1;
+  color: #F2F0EB;
+  font-family: 'Anton', sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.angebote li span {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.angebote li.im-fokus {
+  border-left: 4px solid var(--accent);
+  padding-left: 1rem;
+  background: rgba(240, 43, 50, .08);
+}
+
+.angebote .button {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 1rem 2rem;
+  font-family: 'Space Mono', monospace;
+  font-size: .8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid var(--accent);
+  transition: background .2s, color .2s;
+}
+
+.angebote .button:hover {
+  background: transparent;
+  color: var(--accent);
+}
+
+/* FOOTER – LAST PAGE OF THE ZINE */
+
+footer {
+  background: #101010;
+  color: #92928F;
+  padding: 3rem 6%;
+  border-top: 3px solid var(--accent);
+  font-family: 'Space Mono', monospace;
+  font-size: .7rem;
+  line-height: 1.8;
+}
+
+footer p {
+  margin: .5rem 0;
+}
+
+footer p:first-child {
+  color: #F2F0EB;
+  text-transform: uppercase;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+}
+
+footer a:hover {
+  color: #F2F0EB;
+  border-color: #F2F0EB;
+}
+
+/* FEINSCHLIFF – MOBILE */
+
+@media (max-width: 600px) {
+  .destinations,
+  .angebote {
+    padding: 3rem 1.2rem;
+  }
+
+  .city-card {
+    min-height: 190px;
+  }
+
+  .city-name {
+    font-size: 2.4rem;
+  }
+
+  .angebote li {
+    grid-template-columns: 1fr;
+    gap: .7rem;
+  }
+
+  .angebote li strong {
+    font-size: 1.7rem;
+  }
+
+  footer {
+    padding: 2rem 1.2rem;
+  }
+}
+
+/* MUSIC SECTION – POST-PUNK FANZINE */
+
+.music {
+  background: #171717;
+  color: #F2F0EB;
+  padding: 5rem 5%;
+  border-top: 3px solid var(--accent);
+  border-bottom: 1px solid #555;
+}
+
+.music-heading {
+  max-width: 72rem;
+  margin: 0 auto 3rem;
+  text-align: left;
+}
+
+.music-stempel {
+  color: var(--accent);
+  font-family: 'Space Mono', monospace;
+  font-size: .75rem;
+  letter-spacing: .12em;
+}
+
+.music-heading h2 {
+  color: #F2F0EB;
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(4rem, 9vw, 7rem);
+  line-height: .9;
+  margin: 1.5rem 0;
+}
+
+.music-intro {
+  color: #92928F;
+  font-family: 'Space Mono', monospace;
+  font-size: .8rem;
+}
+
+.music-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.music-card {
+  background: #242424;
+  color: #F2F0EB;
+  border: 1px solid #555;
+  border-top: 4px solid var(--accent);
+  padding: 2rem;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.music-number {
+  color: var(--accent);
+  font-family: 'Space Mono', monospace;
+  font-size: .7rem;
+}
+
+.music-card h3 {
+  color: #F2F0EB;
+  font-family: 'Anton', sans-serif;
+  font-size: 2rem;
+  margin: 2rem 0 .7rem;
+}
+
+.music-card p {
+  color: #BDBDB8;
+  font-family: 'Space Mono', monospace;
+  font-size: .75rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.music-card a {
+  color: var(--accent);
+  font-family: 'Space Mono', monospace;
+  font-size: .7rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: auto;
+}
+
+.music-card a:hover {
+  color: #F2F0EB;
+}
+
+.music-card a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+@media (max-width: 800px) {
+  .music-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .music-heading h2 {
+    font-size: clamp(3.5rem, 15vw, 5rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .music {
+    padding: 3rem 1.2rem;
+  }
+
+  .music-card {
+    min-height: 220px;
+  }
+}
+
+/* HERO – TYPOGRAFIE */
+.hero-stempel {
+  color: #8F4C36;
+  font-family: 'Space Mono', monospace;
+  font-size: .95rem;
+  letter-spacing: .12em;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text h1 {
+  color: #1D2B22;
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(4rem, 9vw, 7.5rem);
+  line-height: .95;
+  margin: 0 0 1.5rem;
+}
+
+.hero-claim {
+  color: #F1F0EB;
+  font-family: 'Space Mono', monospace;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  margin-bottom: 1rem;
+}
+
+.hero-text .kleingedruckt {
+  color: #171717;
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 34rem;
+}
+
+/* WETTER – BESSERE LESBARKEIT */
+.wetter h2 {
+  color: #F1F0EB;
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.1;
+}
+
+#wetter-satz {
+  color: #F1F0EB;
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+  line-height: 1.6;
+}
+
+#wetter-stand {
+  color: #C8C8C4;
+  font-family: 'Space Mono', monospace;
+  font-size: .85rem;
+  line-height: 1.6;
+}
+
+#test-hinweis {
+  color: #E63932;
+  font-family: 'Space Mono', monospace;
+  font-size: .85rem;
+}
+
+
+#city-detail p:not(.eyebrow) {
+  color: #F1F0EB !important;
+}
+
+
+/* EINHEITLICHE TYPOGRAFIE IM STÄDTEBEREICH */
+
+.section-heading > p:last-child,
+.city-detail p:not(.eyebrow) {
+  font-family: 'Space Mono', monospace;
+  font-size: .95rem;
+  line-height: 1.7;
+}
+
+/* NACHTMODUS – HERO-TEXTE */
+body[data-zeit="nacht"] .hero-text h1 {
+  color: #A3B99D;
+}
+
+body[data-zeit="nacht"] .hero-text .kleingedruckt {
+  color: #E6E5E0;
+}
